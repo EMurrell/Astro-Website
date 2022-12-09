@@ -14,6 +14,11 @@ import Header from '../components/Header.astro';
 
 		<h1 class="font-bold text-xl">Welcome to my  <span class="text-6xl">Astro</span> website</h1>
 		<Footer />
+		<script>
+			document.querySelector("#hamburger").addEventListener('click', () => {
+			  document.querySelector("#nav-links").classList.toggle('expanded');
+			});
+		  </script>
 	</main>
 </Layout>
 
