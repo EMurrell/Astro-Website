@@ -1,6 +1,6 @@
 
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline/index.js'
 import logo from '../images/elevate-logo.png';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
