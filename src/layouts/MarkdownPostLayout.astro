@@ -1,14 +1,17 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
 <header class="px-2 pt-96 flex flex-col justify-center items-center mx-auto max-w-4xl">
     <div class="w-full">
-<h1 class="text-6xl mb-2 font-semibold">{frontmatter.title}</h1>
-<p class="text-3xl pt-2 font-semibold">Written by {frontmatter.author}</p>
+<h1 class="text-7xl mb-2 font-semibold">{frontmatter.title}</h1>
+<p class="text-3xl font-semibold">Written by {frontmatter.author}</p>
 <p class="text-base font-semibold pt-1">Published on: {frontmatter.pubDate.slice(0,10)}</p>
-<img class="my-8" src={frontmatter.image.url} width="900" alt={frontmatter.image.alt} />
+<div class="flex flex-row space-x-4">{frontmatter.tags.map((tag) => <p class="mt-4"><a class="text-sky-600 text-xs py-1.5 px-2.5 bg-sky-100 rounded-xl font-bold hover:shadow-md" href={`/tags/${tag}`}>{tag}</a></p>)}</div>
+<img class="my-6" src={frontmatter.image.url} width="900" alt={frontmatter.image.alt} />
+
 </div>
 </header>
 <main class="p-2 pb-32 mx-auto flex flex-col max-w-4xl text-lg">
