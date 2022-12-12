@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -19,12 +19,9 @@ const finished = false;
 const goal = 3;
 ---
 
-<Layout title={pageTitle}>
-    <Header/>
-	<main class="w-full h-screen justify-center flex flex-col items-center">
-        
-        
-        
+<BaseLayout title={pageTitle}>
+   
+	<main class="w-full h-screen justify-center flex flex-col items-center">  
 		<h1 class="font-bold text-xl">This is the  <span class="text-6xl">{pageTitle}</span>page</h1>
 		<p>Here are a few facts about me:</p>
         <ul>
@@ -45,4 +42,4 @@ const goal = 3;
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 <Footer />
 	</main>
-</Layout>
+</BaseLayout>
