@@ -4,7 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<header class="px-2 pt-96 flex flex-col justify-center items-center mx-auto max-w-4xl">
+<header class="px-2 mt-32 flex flex-col justify-center items-center mx-auto max-w-4xl">
     <div class="w-full">
 <h1 class="text-7xl mb-2 font-semibold">{frontmatter.title}</h1>
 <p class="text-3xl font-semibold">Written by {frontmatter.author}</p>
@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
 
 </div>
 </header>
-<main class="p-2 pb-32 mx-auto flex flex-col max-w-4xl text-lg">
+<main class="p-2  h-screen mx-auto flex flex-col max-w-4xl text-lg">
 <slot />
 </main>
 </BaseLayout>

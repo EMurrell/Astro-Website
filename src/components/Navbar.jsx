@@ -8,7 +8,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white w-full">
+    <Disclosure as="nav" className="bg-white w-full fixed top-0">
       {({ open }) => (
         <>
           <div className="mx-auto  px-4 sm:px-6 lg:px-8">
@@ -27,28 +27,28 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="hidden justify-end sm:ml-auto  sm:flex sm:space-x-20 mr-6">
-                
+                 {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
                     href="/"
-                    className="inline-flex items-center border-b-2 border-sky-500 px-1 pt-1 text-lg font-semibold text-neutral-900"
+                    className="inline-flex items-center px-1 pt-1 text-base font-semibold text-neutral-800"
                   >
                     Home
                   </a>
                   <a
                     href="/about/"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-semibold text-neutral-500 hover:border-neutral-300 hover:text-neutral-700"
+                    className="inline-flex items-center  border-transparent px-1 pt-1 text-base font-semibold text-neutral-800 hover:border-neutral-300 hover:text-neutral-700"
                   >
                     About
                   </a>
                   <a
                     href="/blog/"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-semibold text-neutral-500 hover:border-neutral-300 hover:text-neutral-700"
+                    className="inline-flex items-center  border-transparent px-1 pt-1 text-base font-semibold text-neutral-800 hover:border-neutral-300 hover:text-neutral-700"
                   >
                     Blog
                   </a>
                   <a
                     href="/tags/"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-semibold text-neutral-500 hover:border-neutral-300 hover:text-neutral-700"
+                    className="inline-flex items-center  border-transparent px-1 pt-1 text-base font-semibold text-neutral-800 hover:border-neutral-300 hover:text-neutral-700"
                   >
                     Tags
                   </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pt-2 pb-3">
-             
+              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
                 as="a"
                 href="/"
