@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import logo from '../images/elevate-logo.png';
+import Form from '../components/Form.astro'
 const pageTitle = "Elevate Digital";
 ---
 <BaseLayout>
-  <div class="mx-auto">
+  <div class="mx-auto h-fit pt-48">
   <img src={logo} width="200" alt="elevate digital logo" />
   </div>
-  <h1 class="pb-4 text-transparent bg-clip-text drop-shadow-xl bg-gradient-to-br -mt-8 from-sky-200 to-sky-200 via-sky-700 text-center text-7xl font-bold">elevate digital inc</h1>
- 
+  <h1 class="pb-24 text-transparent bg-clip-text  bg-gradient-to-br -mt-8 from-sky-200 to-sky-200 via-sky-700 text-center text-7xl font-bold">elevate digital inc</h1>
+ <Form />
   
 </BaseLayout>
